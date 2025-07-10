@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/todo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>✨ Todo List</h1>
+
+      <div class="wrap">
+        <div class="input-container">
+          <input
+            type="text"
+            id="todo-input"
+            placeholder="Add a new task..."
+            maxlength="100"
+          />
+          <button id="add-btn">Add</button>
+        </div>
+
+        <div class="stats">
+          <span class="total-tasks">Total: 0</span>
+          <span class="completed-tasks">Completed: 0</span>
+          <span class="pending-tasks">Pending: 0</span>
+        </div>
+
+        <ul class="todo-list">
+         
+
+          <div class="empty-state">
+            <div class="empty-icon">📝</div>
+            <div>No tasks yet. Add one above!</div>
+          </div>
+        </ul> 
+      </div>
+
+      <button class="clear-completed">Clear Completed</button>
+    </div>
+
+    <script type="module" src="main.js" defer></script>
+  </body>
+</html>
