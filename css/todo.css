@@ -242,40 +242,6 @@ h1 {
   box-shadow: none;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .container {
-    margin: 10px;
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 2rem;
-  }
-
-  .input-container {
-    flex-direction: column;
-  }
-
-  #add-btn {
-    width: 100%;
-  }
-
-  .stats {
-    flex-direction: column;
-    gap: 8px;
-    text-align: center;
-  }
-
-  .task-item {
-    padding: 12px;
-  }
-
-  .task-name {
-    font-size: 14px;
-  }
-}
-
 /* Animation for new tasks */
 @keyframes slideIn {
   from {
@@ -302,4 +268,756 @@ input:focus {
 /* Smooth transitions */
 * {
   transition: all 0.3s ease;
+}
+
+/* ===== MOBILE MEDIA QUERIES ===== */
+
+/* Very Small Screens (Galaxy Fold, etc.) */
+@media (max-width: 320px) {
+  body {
+    padding: 5px;
+  }
+
+  .container {
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+  }
+
+  #todo-input {
+    padding: 10px 12px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  #add-btn {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .stats span {
+    font-size: 11px;
+  }
+
+  .task-item {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .task-checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .task-name {
+    font-size: 13px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 4px 8px;
+    font-size: 12px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .clear-completed {
+    padding: 10px;
+    font-size: 13px;
+    min-height: 44px;
+  }
+
+  .empty-state {
+    padding: 30px 10px;
+  }
+
+  .empty-icon {
+    font-size: 2.5rem;
+  }
+
+  .empty-state div:last-child {
+    font-size: 14px;
+  }
+}
+
+/* iPhone 6/7/8, iPhone X/XS (375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 94%;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 15px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  #todo-input {
+    padding: 12px 15px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  #add-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    padding: 12px;
+  }
+
+  .stats span {
+    font-size: 12px;
+  }
+
+  .task-item {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .task-checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .task-name {
+    font-size: 14px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 6px 10px;
+    font-size: 14px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .clear-completed {
+    padding: 12px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .empty-state {
+    padding: 40px 15px;
+  }
+
+  .empty-icon {
+    font-size: 3rem;
+  }
+
+  .empty-state div:last-child {
+    font-size: 16px;
+  }
+}
+
+/* iPhone 6/7/8 Plus, iPhone XR, iPhone 11 (414px) */
+@media (min-width: 376px) and (max-width: 414px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 92%;
+    margin: 10px auto;
+    padding: 18px;
+    border-radius: 16px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+    margin-bottom: 22px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+
+  #todo-input {
+    padding: 13px 16px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  #add-btn {
+    width: 100%;
+    padding: 13px 22px;
+    font-size: 15px;
+    min-height: 44px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 13px;
+  }
+
+  .stats span {
+    font-size: 13px;
+  }
+
+  .task-item {
+    padding: 11px;
+    gap: 12px;
+  }
+
+  .task-checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .task-name {
+    font-size: 15px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 7px 11px;
+    font-size: 14px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .clear-completed {
+    padding: 13px;
+    font-size: 15px;
+    min-height: 44px;
+  }
+
+  .empty-state {
+    padding: 45px 18px;
+  }
+
+  .empty-icon {
+    font-size: 3.2rem;
+  }
+
+  .empty-state div:last-child {
+    font-size: 16px;
+  }
+}
+
+/* Extra Small Mobile Phones (415px - 480px) */
+@media (min-width: 415px) and (max-width: 480px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 10px auto;
+    padding: 20px;
+    border-radius: 18px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  #todo-input {
+    padding: 14px 18px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  #add-btn {
+    width: 100%;
+    padding: 14px 25px;
+    font-size: 15px;
+    min-height: 44px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 14px;
+  }
+
+  .stats span {
+    font-size: 13px;
+  }
+
+  .task-item {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .task-checkbox {
+    width: 24px;
+    height: 24px;
+  }
+
+  .task-name {
+    font-size: 15px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .clear-completed {
+    padding: 14px;
+    font-size: 15px;
+    min-height: 44px;
+  }
+
+  .empty-state {
+    padding: 50px 20px;
+  }
+
+  .empty-icon {
+    font-size: 3.5rem;
+  }
+
+  .empty-state div:last-child {
+    font-size: 17px;
+  }
+}
+
+/* Small Mobile Phones (481px - 576px) */
+@media (min-width: 481px) and (max-width: 576px) {
+  body {
+    padding: 15px;
+  }
+
+  .container {
+    width: 88%;
+    margin: 15px auto;
+    padding: 22px;
+    border-radius: 18px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  h1 {
+    font-size: 2.1rem;
+    margin-bottom: 25px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  #todo-input {
+    padding: 14px 18px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  #add-btn {
+    width: 100%;
+    padding: 14px 25px;
+    font-size: 15px;
+    min-height: 44px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 14px;
+  }
+
+  .stats span {
+    font-size: 13px;
+  }
+
+  .task-item {
+    padding: 13px;
+    gap: 13px;
+  }
+
+  .task-checkbox {
+    width: 22px;
+    height: 22px;
+  }
+
+  .task-name {
+    font-size: 15px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 8px 12px;
+    font-size: 15px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .clear-completed {
+    padding: 14px;
+    font-size: 15px;
+    min-height: 44px;
+  }
+
+  .empty-state {
+    padding: 50px 22px;
+  }
+
+  .empty-icon {
+    font-size: 3.5rem;
+  }
+
+  .empty-state div:last-child {
+    font-size: 17px;
+  }
+}
+
+/* Medium Mobile Phones (577px - 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+
+  .container {
+    width: 85%;
+    margin: 20px auto;
+    padding: 25px;
+    border-radius: 20px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 28px;
+  }
+
+  .input-container {
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+  }
+
+  #todo-input {
+    padding: 15px 20px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  #add-btn {
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .stats span {
+    font-size: 14px;
+  }
+
+  .task-item {
+    padding: 12px;
+    gap: 14px;
+  }
+
+  .task-checkbox {
+    width: 22px;
+    height: 22px;
+  }
+
+  .task-name {
+    font-size: 15px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 8px 12px;
+    font-size: 15px;
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  .clear-completed {
+    padding: 15px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  .empty-state {
+    padding: 55px 25px;
+  }
+
+  .empty-icon {
+    font-size: 3.8rem;
+  }
+
+  .empty-state div:last-child {
+    font-size: 18px;
+  }
+}
+
+/* Landscape Mobile Phones */
+@media (max-width: 768px) and (orientation: landscape) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 700px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 15px;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 10px auto;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .input-container {
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  #todo-input {
+    flex: 1;
+    padding: 12px 15px;
+    font-size: 16px;
+    min-height: 44px;
+  }
+
+  #add-btn {
+    width: auto;
+    flex-shrink: 0;
+    padding: 12px 20px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .stats {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 12px;
+  }
+
+  .stats span {
+    font-size: 13px;
+  }
+
+  .task-item {
+    padding: 8px;
+    gap: 12px;
+  }
+
+  .task-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+
+  .task-name {
+    font-size: 14px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 6px 10px;
+    font-size: 13px;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .clear-completed {
+    padding: 12px;
+    font-size: 14px;
+    min-height: 44px;
+  }
+
+  .empty-state {
+    padding: 30px 15px;
+  }
+
+  .empty-icon {
+    font-size: 3rem;
+  }
+
+  .empty-state div:last-child {
+    font-size: 16px;
+  }
+}
+
+/* General Mobile Optimizations */
+@media (max-width: 768px) {
+  /* Better touch targets */
+  button {
+    min-height: 44px;
+  }
+
+  input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .task-checkbox {
+    min-width: 20px;
+    min-height: 20px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    min-width: 40px;
+    min-height: 40px;
+  }
+
+  /* Improved spacing for mobile */
+  .container {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Better mobile scrolling */
+  .todo-list {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* High DPI displays (Retina) */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* Sharper text rendering */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Tablet styles (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 2%;
+    padding: 35px;
+  }
+
+  h1 {
+    font-size: 2.6rem;
+  }
+
+  .input-container {
+    gap: 15px;
+  }
+
+  #todo-input {
+    padding: 16px 22px;
+    font-size: 17px;
+  }
+
+  #add-btn {
+    padding: 16px 28px;
+    font-size: 17px;
+  }
+
+  .stats {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+  }
+
+  .task-item {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .task-name {
+    font-size: 17px;
+  }
+
+  .edit-btn,
+  .delete-btn {
+    padding: 10px 14px;
+    font-size: 17px;
+  }
+
+  .clear-completed {
+    padding: 16px;
+    font-size: 17px;
+  }
 }
